@@ -543,8 +543,8 @@ foreign import capi "sodium.h crypto_auth_hmacsha512_init"
 
 -- | Add a new chunk to the message that will eventually be hashed.
 --
--- After all parts have been supplied, 'cryptoAuthHMACSHA512Final' can be used to finalise the operation
--- and get the final hash.
+-- After all parts have been supplied, 'cryptoAuthHMACSHA512Final' can be used
+-- to finalise the operation and get the final hash.
 --
 -- /See also:/ [crypto_auth_hmacsha512_update()](https://doc.libsodium.org/advanced/hmac-sha2#hmac-sha-512)
 --
@@ -631,7 +631,8 @@ foreign import capi "sodium.h crypto_auth_hmacsha512256_verify"
 -- @since 0.0.1.0
 foreign import capi "sodium.h crypto_auth_hmacsha512256_keygen"
   cryptoAuthHMACSHA512256Keygen ::
-    -- | A pointer to the buffer that will hold the secret key, of size 'cryptoAuthHMACSHA512256KeyBytes'.
+    -- | A pointer to the buffer that will hold the secret key,
+    -- of size 'cryptoAuthHMACSHA512256KeyBytes'.
     Ptr CUChar ->
     -- | Nothing is returned
     IO ()
@@ -647,10 +648,11 @@ foreign import capi "sodium.h crypto_auth_hmacsha512256_keygen"
 -- @since 0.0.1.0
 data CryptoAuthHMACSHA512256State
 
--- | Perform an operation with a 'CryptoAuthHMACSHA512256State' of size 'cryptoAuthHMACSHA512256StateBytes'
--- allocated and deallocated automatically.
+-- | Perform an operation with a 'CryptoAuthHMACSHA512256State'
+-- of size 'cryptoAuthHMACSHA512256StateBytes' allocated and deallocated automatically.
 --
--- ⚠ The return value of 'withCryptoAuthHMACSHA512256State' __MUST NOT__ leak the 'CryptoAuthHMACSHA512256State'.
+-- ⚠ The return value of 'withCryptoAuthHMACSHA512256State' __MUST NOT__ leak
+-- the 'CryptoAuthHMACSHA512256State'.
 --
 -- Please refer to the documentation of 'Foreign.allocaBytes' for more operational details.
 --
@@ -681,8 +683,8 @@ foreign import capi "sodium.h crypto_auth_hmacsha512256_init"
 
 -- | Add a new chunk to the message that will eventually be hashed.
 --
--- After all parts have been supplied, 'cryptoAuthHMACSHA512256Final' can be used to finalise the operation
--- and get the final hash.
+-- After all parts have been supplied, 'cryptoAuthHMACSHA512256Final' can be
+-- used to finalise the operation and get the final hash.
 --
 -- /See also:/ [crypto_auth_hmacsha512256_update()](https://doc.libsodium.org/advanced/hmac-sha2#hmac-sha-512256-256)
 --

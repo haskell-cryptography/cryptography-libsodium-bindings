@@ -15,6 +15,7 @@ module Cryptography.Sodium.Bindings.KeyExchange
     -- $introduction
 
     -- * Key Exchange
+
     -- ** Key generation
     cryptoKXKeyPair,
     cryptoKXSeedKeypair,
@@ -108,7 +109,9 @@ foreign import capi "sodium.h crypto_kx_client_session_keys"
     Ptr CUChar ->
     -- | Returns 0 on success, -1 on error, such as when the server's public key is not acceptable.
     IO CInt
+
 --
+
 -- | Compute a pair of shared session keys (secret and public).
 --
 -- These session keys are computed using:
